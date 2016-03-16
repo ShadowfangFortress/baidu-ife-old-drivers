@@ -1,0 +1,181 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #EEEEEE;
+    font-family: "Microsoft YaHei UI", sans-serif;
+}
+
+#nav-container {
+    background: green;
+    height: 100px;
+}
+
+.nav-title {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100px;
+    line-height: 100px;
+    margin: 0 0 0 50px;
+    color: white;
+}
+
+.nav-links {
+    display: inline-block;
+    float: right;
+    margin: 0 50px 0 0;
+    height: 100px;
+    line-height: 100px;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin: 0 10px 0 0;
+    list-style-type: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+    color: #66FFFF;
+}
+
+article {
+    width: 85%;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border: thin solid #B6B6B6;
+    line-height: 30px;
+    border-right-width: medium;
+    border-bottom-width: medium;
+    border-right-style: ridge;
+    border-bottom-style: ridge;
+}
+
+.post h1 {
+    font-size: 35px;
+}
+
+.post h2 {
+    font-size: 26px;
+    color: #727272;
+}
+
+.post h3 {
+    font-size: 18px;
+    color: #9E9E9E;
+}
+
+#img-wrapper {
+    border: thin solid #B6B6B6;
+    padding: 16px;
+    margin: 16px;
+}
+
+#img-wrapper img {
+    display: block;
+    width: 100%
+}
+
+table {
+    margin: 0 auto;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    color: white;
+    background-color: black;
+    border: 1px solid rgb(203, 203, 203);
+}
+
+td {
+    border: 1px solid rgb(203, 203, 203);
+}
+
+tr:last-child td {
+    background-color: #B6B6B6;
+    border: none;
+}
+
+#form-title {
+    border-left: thick solid #B6B6B6;
+    padding-left: 20px;
+}
+
+
+/*align */
+
+#form-wrapper span {
+    vertical-align: top;
+    width: 16em;
+    text-align: right;
+    display: inline-block;
+}
+
+#form-wrapper {
+    padding: 10px auto;
+}
+
+#city-select {
+    border: 1px solid #111;
+    background: transparent;
+    width: 150px;
+    padding: 5px 35px 5px 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    height: 34px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url(http://www.stackoverflow.com/favicon.ico) 96% no-repeat;
+}
+
+
+/*http://stackoverflow.com/questions/18272497/styling-input-radio-with-css*/
+
+.sex-radio {
+    display: none;
+}
+
+.sex-radio + label {
+    -webkit-appearance: none;
+    background-color: white;
+    border: 4px solid #e1e1e1;
+    border-radius: 10px;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    width: 10px;
+    height: 10px;
+}
+
+.sex-radio:checked + label {
+     background: #2196F3;
+    border: 4px solid #e1e1e1;
+}
+
+#btn-submit {
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 100%;
+    margin: 10px auto;
+    line-height: 40px;
+    height: 40px;
+    background-color: #303F9F;
+    color: white;
+}
+
+footer {
+    height: 100px;
+    background-color: black;
+    color: white;
+    line-height: 100px;
+    text-align: center;
+}
