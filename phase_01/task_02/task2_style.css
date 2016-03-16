@@ -5,12 +5,12 @@ body {
     font-family: "Microsoft YaHei UI", sans-serif;
 }
 
-#nav_container {
+#nav-container {
     background: green;
     height: 100px;
 }
 
-.nav_title {
+.nav-title {
     display: inline-block;
     vertical-align: middle;
     height: 100px;
@@ -19,7 +19,7 @@ body {
     color: white;
 }
 
-.nav_links {
+.nav-links {
     display: inline-block;
     float: right;
     margin: 0 50px 0 0;
@@ -27,18 +27,18 @@ body {
     line-height: 100px;
 }
 
-.nav_links li {
+.nav-links li {
     display: inline-block;
     margin: 0 10px 0 0;
     list-style-type: none;
 }
 
-.nav_links li a {
+.nav-links li a {
     text-decoration: none;
     color: white;
 }
 
-.nav_links li a:hover {
+.nav-links li a:hover {
     text-decoration: underline;
     color: #66FFFF;
 }
@@ -70,13 +70,13 @@ article {
     color: #9E9E9E;
 }
 
-#img_wrapper {
+#img-wrapper {
     border: thin solid #B6B6B6;
     padding: 16px;
     margin: 16px;
 }
 
-#img_wrapper img {
+#img-wrapper img {
     display: block;
     width: 100%
 }
@@ -103,7 +103,7 @@ tr:last-child td {
     border: none;
 }
 
-#form_title {
+#form-title {
     border-left: thick solid #B6B6B6;
     padding-left: 20px;
 }
@@ -111,18 +111,18 @@ tr:last-child td {
 
 /*align */
 
-#form_wrapper span {
+#form-wrapper span {
     vertical-align: top;
     width: 16em;
     text-align: right;
     display: inline-block;
 }
 
-#form_wrapper {
+#form-wrapper {
     padding: 10px auto;
 }
 
-#city_select {
+#city-select {
     border: 1px solid #111;
     background: transparent;
     width: 150px;
@@ -139,11 +139,11 @@ tr:last-child td {
 
 /*http://stackoverflow.com/questions/18272497/styling-input-radio-with-css*/
 
-.sex_radio {
+.sex-radio {
     display: none;
 }
 
-.sex_radio + label {
+.sex-radio + label {
     -webkit-appearance: none;
     background-color: white;
     border: 4px solid #e1e1e1;
@@ -155,12 +155,12 @@ tr:last-child td {
     height: 10px;
 }
 
-.sex_radio:checked + label {
+.sex-radio:checked + label {
      background: #2196F3;
     border: 4px solid #e1e1e1;
 }
 
-#btn_submit {
+#btn-submit {
     border: none;
     border-radius: 10px;
     font-size: 20px;
