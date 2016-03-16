@@ -1,0 +1,45 @@
+body {
+    height: 100%;
+    background-color: #eee;
+    margin: 20px;
+    overflow: auto;
+}
+/*
+body:after{
+    content: "";
+    display: table;
+    clear: both;
+}*/
+
+main {
+    float: left;
+    width: 100%;
+}
+
+.left {
+    float: left;
+    margin-left: -100%;
+    background-color: #FFF;
+    width: 200px;
+    height: 200px;
+}
+
+.body {
+    padding: 20px;
+    background-color: #FFF;    
+    margin-left: 240px;
+    margin-right: 160px;
+}
+
+.right {
+    float: left;
+    background-color: #FFF;
+    width: 120px;
+    margin-left: -140px;
+}
+
+img {
+    margin: 20px;
+    width: 80px;
+    height: 80px;
+}
