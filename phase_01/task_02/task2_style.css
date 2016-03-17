@@ -122,43 +122,8 @@ tr:last-child td {
     padding: 10px auto;
 }
 
-#city-select {
-    border: 1px solid #111;
-    background: transparent;
-    width: 150px;
-    padding: 5px 35px 5px 5px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    height: 34px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: url(http://www.stackoverflow.com/favicon.ico) 96% no-repeat;
-}
-
-
 /*http://stackoverflow.com/questions/18272497/styling-input-radio-with-css*/
 
-.sex-radio {
-    display: none;
-}
-
-.sex-radio + label {
-    -webkit-appearance: none;
-    background-color: white;
-    border: 4px solid #e1e1e1;
-    border-radius: 10px;
-    width: 100%;
-    display: inline-block;
-    position: relative;
-    width: 10px;
-    height: 10px;
-}
-
-.sex-radio:checked + label {
-     background: #2196F3;
-    border: 4px solid #e1e1e1;
-}
 
 #btn-submit {
     border: none;
