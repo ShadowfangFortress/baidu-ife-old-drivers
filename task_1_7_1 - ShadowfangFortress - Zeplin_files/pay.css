@@ -1,0 +1,462 @@
+#planChooserOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 36px 0;
+    overflow: auto;
+    z-index: 1000;
+
+    background-color: rgba(87, 71, 81, 0.7);
+    background-color: var(--maroon-70pc);
+}
+
+#planChooser {
+    position: relative;
+    width: 960px;
+    margin: 0 auto 36px;
+    padding: 48px 0 36px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+#planChooser h2 {
+    text-align: center;
+    line-height: 43px;
+    font-size: 32px;
+    font-weight: 300;
+    color: #574751;
+    color: var(--maroon);
+}
+
+#discountNotice {
+    margin: 24px 0;
+    text-align: center;
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ee6723;
+    color: var(--peach);
+}
+
+#paymentPeriods {
+    position: relative;
+    width: 172px;
+    margin: 6px auto 0;
+    text-align: center;
+}
+
+#paymentPeriodSlider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 84px;
+    height: 24px;
+    border-radius: 29px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 14px;
+    background-color: #fdbd39;
+    background-color: var(--light-orange);
+    transition: -webkit-transform 150ms ease-out;
+    transition: transform 150ms ease-out;
+}
+
+#paymentPeriods #paymentPeriodSlider span {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    transition: color 150ms ease-out;
+}
+
+#monthlyPayment:checked ~ #paymentPeriodSlider .monthly,
+#annualPayment:checked ~ #paymentPeriodSlider .annual {
+    color: #fff;
+}
+
+#monthlyPayment:checked ~ #paymentPeriodSlider .annual,
+#annualPayment:checked ~ #paymentPeriodSlider .monthly {
+    color: transparent;
+}
+
+#monthlyPayment:checked ~ #paymentPeriodSlider {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+#annualPayment:checked ~ #paymentPeriodSlider {
+    -webkit-transform: translateX(calc(100% + 4px));
+    transform: translateX(calc(100% + 4px));
+}
+
+#paymentPeriods input {
+    display: none;
+}
+
+#paymentPeriods label {
+    position: relative;
+    display: inline-block;
+    width: 84px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 14px;
+    color: #bcb5b9;
+    color: var(--warm-gray);
+    transition: color 150ms ease-out;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#paymentPeriods input:checked + label {
+    color: transparent;
+}
+
+#annualPayment:not(:checked) + label::after {
+    position: absolute;
+    padding-left: 3px;
+    content: "(Save 10%)";
+    white-space: nowrap;
+    line-height: 24px;
+    font-size: 14px;
+    color: #fdbd39;
+    color: var(--light-orange);
+}
+
+#couponForm {
+    position: static;
+    margin: 0;
+}
+
+#couponWrapper {
+    position: absolute;
+    top: 163px;
+    right: 40px;
+    max-width: 180px;
+}
+
+.couponArea {
+    display: -webkit-flex;
+    -webkit-align-items: center;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    width: 180px;
+    padding: 2px 0;
+}
+
+#couponCode {
+    min-width: 0;
+    -webkit-flex: 1;
+    flex: 1;
+
+    height: 22px;
+    background-image: none;
+    line-height: 21px;
+    font-size: 16px;
+    color: #574751;
+    color: var(--maroon);
+}
+
+#couponCode:not(:focus) {
+    cursor: pointer;
+}
+
+.couponPlaceholder {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    line-height: 21px;
+    font-size: 16px;
+    color: #574751;
+    color: var(--maroon);
+    pointer-events: none;
+}
+
+#couponCode:focus ~ .couponPlaceholder,
+.couponArea.typed .couponPlaceholder {
+    display: none;
+}
+
+.couponUnderline {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+
+    background-color: transparent;
+    will-change: background-color;
+    transition: background-color 300ms ease-out;
+}
+
+#couponCode:focus ~ .couponUnderline {
+    background-color: #fdbd39;
+    background-color: var(--light-orange);
+}
+
+.couponLabel {
+    position: absolute;
+    left: 0;
+    top: -11px;
+    opacity: 0;
+    font-size: 12px;
+    color: #fdbd39;
+    color: var(--light-orange);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+
+    transition: opacity 200ms ease;
+    will-change: opacity;
+    pointer-events: none;
+}
+
+#couponCode:focus ~ .couponLabel {
+    opacity: 1;
+}
+
+#applyCouponButton {
+    display: none;
+    width: initial;
+    height: initial;
+    margin: initial;
+    padding: 0 6px;
+    border-radius: 40px;
+    background-color: #fdbd39;
+    background-color: var(--light-orange);
+    line-height: 20px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.couponArea.typed #applyCouponButton {
+    display: block;
+}
+
+#pricingTable {
+    width: calc(100% - 48px);
+    margin: 0 24px;
+}
+
+#pricingTable .plan {
+    height: 96px;
+}
+
+#pricingTable .plan:not(.free) {
+    cursor: pointer;
+}
+
+#pricingTable .plan.current {
+    cursor: default;
+}
+
+#pricingTable .plan.current:not(.free) {
+    background-color: #c8cf2d;
+    background-color: var(--light-green);
+}
+
+#pricingTable .plan.current:not(.free) td,
+#pricingTable .plan.current:not(.free) .originalPrice,
+#pricingTable .plan.current:not(.free) .currentPlanIndicator {
+    color: #fff;
+}
+
+#pricingTable .plan.recommended {
+    background-color: rgba(253, 189, 57, 0.15);
+    background-color: var(--light-orange-15pc);
+}
+
+#pricingTable td {
+    line-height: 24px;
+    font-size: 18px;
+    color: #574751;
+    color: var(--maroon);
+}
+
+#pricingTable .plan td:nth-child(n+2) {
+    border-bottom: 1px solid #bcb5b9;
+    border-bottom: 1px solid var(--warm-gray);
+}
+
+#pricingTable .plan.borderless td:nth-child(n+2),
+#pricingTable .plan.recommended td:nth-child(n+2),
+#pricingTable .plan.current:not(.free) td:nth-child(n+2) {
+    border-bottom: none;
+}
+
+#pricingTable .planName {
+    width: 180px;
+    padding: 24px 0 24px 36px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+#pricingTable td:nth-child(2) {
+    width: 260px;
+    padding-left: 4px;
+}
+
+#pricingTable td:nth-child(3) {
+    text-align: center;
+}
+
+#pricingTable .price {
+    position: relative;
+}
+
+#pricingTable .planPrice {
+    line-height: 32px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+#pricingTable .planPrice::before {
+    content: "$";
+}
+
+#pricingTable .planPrice::after {
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+#pricingTable .planPrice::after {
+    content: "/mo";
+}
+
+#pricingTable .originalPrice {
+    display: none;
+    white-space: nowrap;
+    line-height: 19px;
+    font-size: 14px;
+    color: #bcb5b9;
+    color: var(--warm-gray);
+}
+
+#pricingTable .originalPrice::before {
+    content: "Down from $";
+}
+
+#pricingTable .planPrice.hasDiscount + .originalPrice {
+    display: block;
+}
+
+#pricingTable .plan.recommended td:nth-child(3) {
+    color: #ee6723;
+    color: var(--peach);
+}
+
+#pricingTable .plan td:last-child {
+    width: 350px;
+    padding: 0 24px;
+    text-align: right;
+}
+
+#pricingTable .currentPlanIndicator {
+    width: 180px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #bcb5b9;
+    color: var(--warm-gray);
+}
+
+#pricingTable td:last-child button {
+    border-radius: 4px;
+    font-weight: 500;
+    background-color: transparent;
+    color: #fdbd39;
+    color: var(--light-orange);
+}
+
+#pricingTable .plan.recommended td:last-child button {
+    background-color: #ee6723;
+    background-color: var(--peach);
+
+    box-shadow: 0 3px 7px 0 rgba(87, 71, 81, 0.2);
+    box-shadow: 0 3px 7px 0 var(--maroon-20pc);
+    color: #fff;
+}
+
+#pricingTable .plan:hover td:last-child button {
+    box-shadow: 0 6px 10px 0 rgba(87, 71, 81, 0.2);
+    box-shadow: 0 6px 10px 0 var(--maroon-20pc);
+}
+
+#pricingTable .plan td:last-child button,
+#pricingTable .plan.current .currentPlanIndicator {
+    display: inline-block;
+}
+
+#pricingTable .plan .currentPlanIndicator,
+#pricingTable .plan.current td:last-child button {
+    display: none;
+}
+
+#teamNotice {
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    margin: 48px 0;
+}
+
+#teamNotice img {
+    width: 48px;
+    height: 34px;
+    margin-right: 12px;
+}
+
+#teamNotice > div > div:first-child {
+    color: #574751;
+    color: var(--maroon);
+}
+
+#teamNotice > div > div:last-child {
+    color: #bcb5b9;
+    color: var(--warm-gray);
+}
+
+#miniFAQ {
+    margin: 0 auto;
+}
+
+#miniFAQ section {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+#miniFAQ section:nth-child(n+2) {
+    margin-top: 24px;
+}
+
+#miniFAQ h3 {
+    position: relative;
+    margin-bottom: 6px;
+    text-align: left;
+    line-height: 21px;
+    font-size: 16px;
+    color: #574751;
+    color: var(--maroon);
+}
+
+#miniFAQ p {
+    line-height: 21px;
+    font-size: 16px;
+    color: #bcb5b9;
+    color: var(--warm-gray);
+}

@@ -1,0 +1,112 @@
+.cm-s-theme-zeplin {
+    height: auto;
+    background-color: #474e5d;
+    font-size: 14px;
+    color: #fff;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.cm-s-theme-zeplin * {
+    font-family: Menlo, monospace;
+}
+
+.cm-s-theme-zeplin .CodeMirror-gutters {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(243, 243, 243, 0.6);
+    border: none;
+}
+
+.cm-s-theme-zeplin .CodeMirror-guttermarker,
+.cm-s-theme-zeplin .CodeMirror-guttermarker-subtle,
+.cm-s-theme-zeplin .CodeMirror-linenumber {
+    width: 20px;
+    padding: 0;
+    line-height: 16px;
+    font-size: 16px;
+    text-align: center;
+    color: rgba(243, 243, 243, 0.6);
+}
+
+.cm-s-theme-zeplin .CodeMirror-cursor { border-left: 1px solid #f8f8f0; }
+
+.cm-s-theme-zeplin .CodeMirror-lines {
+    padding: 20px 0;
+}
+
+.cm-s-theme-zeplin .CodeMirror-line {
+    text-indent: -4ch;
+    padding-left: calc(6px + 4ch);
+}
+
+.cm-s-theme-zeplin .CodeMirror-activeline-background { background: rgba(0, 0, 0, 0); }
+
+.cm-s-theme-zeplin .cm-operator { color: rgba(233, 237, 237, 1); }
+
+.cm-s-theme-zeplin .cm-def,
+.cm-s-theme-zeplin .cm-variable-2,
+.cm-s-theme-zeplin .cm-variable-3 {
+    white-space: nowrap;
+    color: #fff;
+}
+
+.cm-s-theme-zeplin .cm-builtin { color: #DECB6B; }
+
+.cm-s-theme-zeplin .cm-atom,
+.cm-s-theme-zeplin .cm-attribute,
+.cm-s-theme-zeplin .cm-keyword,
+.cm-s-theme-zeplin .cm-string,
+.cm-s-theme-zeplin .cm-variable {
+    white-space: nowrap;
+    color: #ff7587;
+}
+
+.cm-s-theme-zeplin .cm-hex-color,
+.cm-s-theme-zeplin .cm-number,
+.cm-s-theme-zeplin .cm-unit {
+    color: #c3ff5b;
+}
+
+.cm-s-theme-zeplin .cm-string-2 { color: #80CBC4; }
+.cm-s-theme-zeplin .cm-comment { color: #546E7A; }
+
+.cm-s-theme-zeplin .cm-meta,
+.cm-s-theme-zeplin .cm-tag,
+.cm-s-theme-zeplin .cm-property {
+    color: #27f4ff;
+}
+
+.cm-s-theme-zeplin .cm-qualifier {
+    color: #fecf33;
+}
+
+.cm-s-theme-zeplin .cm-error {
+  color: rgba(255, 255, 255, 1.0);
+  background-color: #EC5F67;
+}
+
+.cm-s-theme-zeplin .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
+
+.cm-s-theme-zeplin .CodeMirror-selected,
+.cm-s-theme-zeplin.CodeMirror-focused .CodeMirror-selected {
+    background-color: #ee6723;
+}
+
+.cm-s-theme-zeplin .CodeMirror-line::selection,
+.cm-s-theme-zeplin .CodeMirror-line > span::selection,
+.cm-s-theme-zeplin .CodeMirror-line > span > span::selection {
+    background-color: #ee6723;
+}
+
+.cm-s-theme-zeplin .CodeMirror-line::-moz-selection,
+.cm-s-theme-zeplin .CodeMirror-line > span::-moz-selection,
+.cm-s-theme-zeplin .CodeMirror-line > span > span::-moz-selection {
+    background-color: #ee6723;
+}
+
+.cm-s-theme-zeplin .CodeMirror-selectedtext {
+    color: #fff;
+}
