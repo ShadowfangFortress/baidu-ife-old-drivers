@@ -24,7 +24,7 @@ main {
     height: 200px;
 }
 
-.body {
+.container {
     padding: 20px;
     background-color: #FFF;    
     margin-left: 240px;
