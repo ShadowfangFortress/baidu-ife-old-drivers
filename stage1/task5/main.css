@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+}
+
+.header-url {
+    float: right;
+    height: 74px;
+    line-height: 74px;
+}
+
+header>div>a {
+    color: #ddd;
+    margin-right: 8px;
+}
+
+header>h1 {
+    margin-left: 20px;
+    color: #ddd;
+    display: inline-block;
+}
+
+header {
+    background-color: #222;
+    overflow: auto;
+}
+.container{
+    position: relative;
+}
+
+.card {
+    padding: 16px;
+    position: relative;
+    margin: 0 0 1.5rem 0;
+    background-color: #fff;
+    transition: box-shadow .25s;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+main {
+    position: absolute;
+    margin: 15px 360px 15px 20px;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+aside {
+    position: absolute;
+    width: 300px;
+    margin: 15px 20px;
+    right: 0;
+    top: 0;
+}
+
+.aside-title{
+    padding-left: 8px;
+    border-left: solid #888 4px
+}
+
+img{
+    width: 120px;
+    height: 120px;
+}
