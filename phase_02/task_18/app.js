@@ -30,6 +30,9 @@ function foo(f) {
         var div = document.createElement("div")
         div.className = "temple"
         div.innerText = etContent.value
+        div.addEventListener("click",function (e) {
+            content.removeChild(this)
+        })
         f(div)
         etContent.value = ""
     }
