@@ -1,11 +1,9 @@
-var etContent = document.getElementById('et-content')
-var btnLeftIn = document.getElementsByClassName("left-in")[0]
-var btnLeftOut = document.getElementsByClassName("left-out")[0]
-var btnRightOut = document.getElementsByClassName("right-out")[0]
-var btnRightIn = document.getElementsByClassName("right-in")[0]
+var etContent = document.querySelector('#et-content')
+var btnLeftIn = document.querySelector(".left-in")
+var btnLeftOut = document.querySelector(".left-out")
+var btnRightOut = document.querySelector(".right-out")
+var btnRightIn = document.querySelector(".right-in")
 var content = document.querySelector('.content')
-
-var list = []
 
 btnLeftIn.addEventListener("click", foo(function(div) {
     content.insertBefore(div, content.childNodes[0])
