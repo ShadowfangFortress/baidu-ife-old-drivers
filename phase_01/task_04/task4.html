@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>定位</title>
+    <style>
+        body{
+            position: relative;
+        }
+        .container{
+            position: absolute;
+            height: 200px;
+            width: 400px;
+            background-color: #555;
+            left: 50%;
+            top:50%;
+            margin: -100px 0 0 -200px;
+        }
+        .bo {
+            height: 50px;
+            width:50px;
+            background-color: #fc0;
+        }
+        .left-top{
+            border-bottom-right-radius: 50px;
+        }
+        
+        .right-bottom{
+            border-top-left-radius: 50px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bo left-top"></div>
+        <div class="bo right-bottom"></div>
+    </div>
+</body>
+</html>
