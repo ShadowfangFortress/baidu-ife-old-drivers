@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    padding: 20px;
+    border: thin solid black;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rectangle-one {
+    height: 120px;
+    width: 150px;
+    border: thin solid red;
+    margin: 20px;
+}
+
+.rectangle-two {
+    height: 100px;
+    width: 150px;
+    border: thin solid red;
+    margin: 20px;
+}
+
+.rectangle-three {
+    height: 40px;
+    width: 150px;
+    border: thin solid red;
+    margin: 20px;
+}
+
+.rectangle-four {
+    height: 200px;
+    width: 150px;
+    border: thin solid blue;
+    margin: 20px;
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .rectangle-four {
+        order: -1;
+    }
+}

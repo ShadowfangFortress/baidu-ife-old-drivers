@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Baidu IFE Task 1 Phase 1</title>
+    <link rel="stylesheet" href="task2_style.css">
+</head>
+<header id="nav-container">
+    <h1 class="nav-title"> <b>Header title</b>
+        </h1>
+    <ul class="nav-links">
+        <li>
+            <a href="www.github.com">Github</a>
+        </li>
+        <li>
+            <a href="www.github.com">Github</a>
+        </li>
+        <li>
+            <a href="www.github.com">Github</a>
+        </li>
+    </ul>
+</header>
+
+<body>
+    <article class="post">
+        <h1>Header title</h1>
+        <h2>Header title</h2>
+        <h3>作者 发表时间</h3>
+        <p>这里有很长很长的段落，这里有很长很长的段落，这里有很长很长的段落，这里有很长很长的段落，这里有很长很长的段落，</p>
+        <p>换行了</p>
+        <p>这里有很长很长的段落，这里有很长很长的段落，这里有很长很长的段落，这里有很长很长的段落，这里有很长很长的段落，</p>
+        <p>换行了</p>
+        <img src="task2.jpg" alt="HeHe">
+        <p>
+            这里有很长很长的段落，这里有很长很长的段落，这里有很长很长的段落，这里有很长很长的段落，这里有一个链接
+            <a href="http://www.github.com">这里有一个链接</a> 有很长很长的段落，
+        </p>
+        <p>
+            这里有很长很长的段落，这里有很长很长的段落，这里有很长很长的段落，这里有很长很长的段落，这里有一个链接
+            <a href="http://www.github.com" target="_blank">这里有一个链接,新窗口中打开</a> 有很长很长的段落，
+        </p>
+        <p>换行了</p>
+    </article>
+    <article class="post">
+        <h1> <b>Header title</b>
+        </h1>
+        <h2>
+            <b>Header title</b>
+        </h2>
+        <h3>
+            <b>Header title</b>
+        </h3>
+        <div id="img-wrapper">
+            <h4>好看的图片</h4>
+            <img src="task2.jpg" alt="HeHe"></div>
+    </article>
+    <article class="post">
+        <h1>
+            <b>Header title</b>
+        </h1>
+        <h2>
+            <b>Header title</b>
+        </h2>
+        <h3>
+            <b>Header title</b>
+        </h3>
+        <ol>
+            <li>Order 1</li>
+            <li>Order 2</li>
+            <li>Order 3</li>
+        </ol>
+        <p>这是一个表格</p>
+        <table>
+            <tr>
+                <th>表头</th>
+                <th>表头</th>
+                <th>表头</th>
+            </tr>
+            <tr>
+                <td>表格单元格内容</td>
+                <td>表格单元格内容</td>
+                <td><a href="http://www.github.com" target="_blank"> 操作</a>
+            </tr>
+            <tr>
+                <td>表格单元格内容</td>
+                <td>表格单元格内容</td>
+                <td><a href="http://www.github.com" target="_blank"> 操作</a>
+            </tr>
+            <tr>
+                <td>表格单元格内容</td>
+                <td>表格单元格内容</td>
+                <td><a href="http://www.github.com" target="_blank"> 操作</a></td>
+            </tr>
+            <tr>
+                <td>总计</td>
+                <td colspan="2">表格单元格内容</td>
+            </tr>
+        </table>
+    </article>
+    <article class="post">
+        <h2 id="form-title">这里以后是一个侧边栏</h2>
+        <form>
+            <div id="form-wrapper">
+                <p>
+                    <span><label for="firstname"> First name:  </label> </span>
+                    <input type="text" name="firstname" placeholder="Enter first name." />
+                </p>
+                <p>
+                    <span> <label for="email">
+                    Email: </label> </span>
+                    <input type="text" name="email" placeholder="Email here." />
+                </p>
+                <p>
+                    <span><label for="password"> Password: </label> </span>
+                    <input type="password" name="password" placeholder="Password here." />
+                </p>
+                <p>
+                    <label for="password-again"> <span>Password again:  </span></label>
+                    <input type="password" name="password-again" placeholder="Password again." />
+                </p>
+                <p>
+                    <span>性别:</span>
+                    <input id="man" type="radio" class="sex-radio" name="sex" value="Male" checked="checked" />
+                    <label for="man"></label><label for="man">男</label>
+                    <input id="woman" type="radio" class="sex-radio" name="sex" value="Female" />
+                    <label for="woman"></label><label for="woman">女</label>
+                </p>
+                <p>
+                    <span> <label for="city-select">城市:</label> </span>
+                    <select name="city" id="city-select">
+                        <option value="gz">Guangzhou</option>
+                        <option value="hk">Hongkong</option>
+                        <option value="bj" selected="selected">Beijing</option>
+                    </select>
+                </p>
+                <p>
+                    <span>爱好:</span>
+                    <label for="sport">
+                        <input type="checkbox" id="sport" value="Sport"> Sport </label>
+                    <label for="art">
+                        <input type="checkbox" id="art" value="Art"> Art</label>
+                    <label for="science">
+                        <input type="checkbox" id="science" value="Scinece"> Science</label>
+                </p>
+                <p>
+                    <span>个人描述:</span>
+                    <textarea rows="6" cols="80" wrap="hard">在w3school，你可以找到你所需要的所有的网站建设教程。</textarea>
+                </p>
+            </div>
+            <input id="btn-submit" type="button" value="确认提交" />
+        </form>
+    </article>
+</body>
+<footer>版权所有©</footer>
+
+</html>
