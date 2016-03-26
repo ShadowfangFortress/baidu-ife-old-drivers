@@ -1,3 +1,6 @@
+body{
+	margin: 0;
+}
 ul,li{
 	list-style: none;
 	padding: 0;
@@ -133,6 +136,7 @@ ul,li{
 }
 .u-usr-info span {
 	float: left;
+    color: #6e8095;
 }
 .u-usr-info .text{
 	clear: left;
