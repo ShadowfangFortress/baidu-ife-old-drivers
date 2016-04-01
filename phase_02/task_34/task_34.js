@@ -35,7 +35,8 @@ var CONSTANT = {
 
 var BLOCK = {
 	ele : null,
-	creat: function(game, ele, cood) {
+	create: function(game, ele, cood) {
+		BLOCK.ele = ele;
 		var _cood = {
 			dir: 0,
 			x: cood.x || 0,
@@ -49,13 +50,14 @@ var BLOCK = {
 		html += '<div id="' + ele + '" class="block" style="width:'+mapItem.offsetWidth+'px; height:'+(mapItem.offsetHeight - 14)+'px;'
 				+ 'left:' + left + 'px; top:' + top + 'px; transform:rotate('+ _cood.dir +'); -webkit-transform:rotate(' + _cood.dir + ');"></div>';
 		document.getElementById('game').innerHTML = html;
-		BLOCK.ele = document.getElementById(ele);
 	},
 	destroy: function() {
-		BLOCK.ele.parentNode.removeChild(BLOCK.ele);
+		var el = document.getElementById(BLOCK.ele);
+		el.parentNode.removeChild(el);
 		BLOCK.ele = null;
 	},
 	bind: function() {
+
 		BLOCK.getOrder(document.getElementById('order').value);
 	},
 	getOrder: function(order) {
