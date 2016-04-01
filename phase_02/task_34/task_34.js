@@ -36,6 +36,9 @@ var CONSTANT = {
 var BLOCK = {
 	ele : null,
 	create: function(game, ele, cood) {
+		if (BLOCK.ele) {
+			return;
+		}
 		BLOCK.ele = ele;
 		var _cood = {
 			dir: 0,
