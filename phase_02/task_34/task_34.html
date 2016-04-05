@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<meta charset="uft-8">
+		<title>Game</title>
+		<style type="text/css">
+			td{
+				border: 1px solid;
+				width: 40px;
+				height: 40px;
+				padding: 0;
+			}
+			table{
+				border-collapse: collapse;
+				border-spacing: 0;
+   			 	margin: 0 auto;
+			}
+			.title{
+				border: 0 none;
+    			font-weight: bold;
+    			text-align: center;
+			}
+			#app{
+				margin: auto;
+    			width: 600px;
+			}
+			.control{
+				margin: 20px 0 0 40px;
+			}
+			.poi-N {	
+				border-top: 15px solid blue;
+				background-color: red;
+			}
+			.poi-S {	
+				border-bottom: 15px solid blue;
+				background-color: red;
+			}
+			.poi-W {	
+				border-left: 15px solid blue;
+				background-color: red;
+				width: 20px;
+			}
+			.poi-E {	
+				border-right: 15px solid blue;
+				background-color: red;
+				width: 20px;
+			}
+			#game {
+				display: table;
+				position: relative;
+			}
+			.block {
+				position: absolute;
+				/*top: 40px;*/
+				background-color: red;
+				border-top: 15px solid blue;
+				
+			}
+			@keyframes mymove
+			{
+				0% {transform:rotate(0);left: 0px;top: 40px;}
+				50% {transform:rotate(0);left: 0px;top: 40px;}
+				100% {transform:rotate(0);left: 0px;top: 40px;}
+			}
+			@-webkit-keyframes mymove
+			{
+				0% {-webkit-transform:rotate(0);left: 0px;}
+				50% {-webkit-transform:rotate(90deg);left: 0px;}
+				100% {-webkit-transform:rotate(90deg);left: 41px;}
+			}
+		</style>
+		<script type="text/javascript" src="task_34.js"></script>
+	</head>
+	<body>
+			<div id="app">
+				<div id="game">
+					<div id="gameMap"></div>
+				</div>
+				<div class="control">
+					<input type="text" id="order">
+					<button id="execute" onClick="BLOCK.bind()">run</button>
+				</div>
+			</div>
+	</body>
+	<script type="text/javascript">
+		Map.init(10, 10, 'gameMap');
+		BLOCK.create('game', 'block', {x: 4, y: 3});
+	</script>
+</html>
