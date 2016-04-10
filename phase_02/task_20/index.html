@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>old driver</title>
+    <style>
+        .temple {
+            margin-top: 10px;
+            background-color: red;
+            text-align: center;
+            padding: 20px;
+            display: inline-block;
+            margin-right: 12px;
+        }
+        .text-control{
+            position: relative;
+            bottom: 120px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <textarea name="evMain" id="et-main" cols="30" rows="10"></textarea>
+        <div class="text-control">
+            <button class="left-in">左侧入</button>
+            <button class="right-in" style="margin-right:10px">右侧入</button>
+
+            <button class="left-out">左侧出</button>
+            <button class="right-out">右侧出</button>
+            <div>
+                <input id="et-query" type="text">
+                <button id="btn-query">查询</button>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="temple">12</div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
